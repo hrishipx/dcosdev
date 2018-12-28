@@ -4,8 +4,8 @@ template = """
     "uris": {
       "jre-tar-gz": "https://downloads.mesosphere.com/java/server-jre-8u162-linux-x64.tar.gz",
       "libmesos-bundle-tar-gz": "https://downloads.mesosphere.com/libmesos-bundle/libmesos-bundle-1.11.0.tar.gz",
-      "bootstrap-zip": "https://downloads.mesosphere.com/dcos-commons/artifacts/%(version)s/bootstrap.zip",
-      "executor-zip": "https://downloads.mesosphere.com/dcos-commons/artifacts/%(version)s/executor.zip",
+      "bootstrap-zip": "https://s3-us-west-1.amazonaws.com/px-dcos/dcos-commons/artifacts/%(version)s/bootstrap.zip",
+      "executor-zip": "https://s3-us-west-1.amazonaws.com/px-dcos/dcos-commons/artifacts/%(version)s/executor.zip",
       "scheduler-zip": "https://ecosystem-repo.s3.amazonaws.com/sdk/artifacts/%(version)s/operator-scheduler.zip",
       "svc": "http://minio.marathon.l4lb.thisdcos.directory:9000/artifacts/%(template)s/svc.yml"
     }
@@ -21,21 +21,21 @@ template = """
         "x86-64":{
           "contentHash":[ { "algo":"sha256", "value":"%(cli-darwin)s" } ],
           "kind":"executable",
-          "url":"https://downloads.mesosphere.com/dcos-commons/artifacts/%(version)s/dcos-service-cli-darwin"
+          "url":"https://s3-us-west-1.amazonaws.com/px-dcos/dcos-commons/artifacts/%(version)s/dcos-service-cli-darwin"
         }
       },
       "linux":{
         "x86-64":{
           "contentHash":[ { "algo":"sha256", "value":"%(cli-linux)s" } ],
           "kind":"executable",
-          "url":"https://downloads.mesosphere.com/dcos-commons/artifacts/%(version)s/dcos-service-cli-linux"
+          "url":"https://s3-us-west-1.amazonaws.com/px-dcos/dcos-commons/artifacts/%(version)s/dcos-service-cli-linux"
         }
       },
       "windows":{
         "x86-64":{
           "contentHash":[ { "algo":"sha256", "value":"%(cli-win)s" } ],
           "kind":"executable",
-          "url":"https://downloads.mesosphere.com/dcos-commons/artifacts/%(version)s/dcos-service-cli.exe"
+          "url":"https://s3-us-west-1.amazonaws.com/px-dcos/dcos-commons/artifacts/%(version)s/dcos-service-cli.exe"
         }
       }
     }
